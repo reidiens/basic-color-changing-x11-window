@@ -149,7 +149,7 @@ int init_win(Window *win, int argc, char *argv[], int color) {
 		*win = XCreateSimpleWindow(disp, root_win, POSX, POSY, WIDTH, HEIGHT, BORDER, WhitePixel(disp, scr), BlackPixel(disp, scr));
 
 	/* set window properties */
-	XSetStandardProperties(disp, *win, "le window", "le window icon", None, argv, argc, NULL);
+	XSetStandardProperties(disp, *win, "Super Awesome Color-Changing Window", "holy cow!", None, argv, argc, NULL);
 
 	/* choose which types of inputs to look for */
 	XSelectInput(disp, *win, KeyPressMask | ButtonPressMask);
