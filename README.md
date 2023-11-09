@@ -10,10 +10,6 @@ Navigate to the folder you downloaded to, then type:
 
 `gcc basic-window.c -lX11 -o basic-window`
 
-then type:
-
-`./basic-window`
-
-to run.
+then type `./basic-window` to run it.
 
 `./basic-window 2` will make the background color white on launch.
