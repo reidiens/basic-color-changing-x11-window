@@ -52,7 +52,7 @@ int init_x();
 void close_x(Window win);
 int init_win(Window *win, int argc, char *argv[], int color);
 void redraw(Window *win);
-int checkargs(int argc, char *argv[]);
+int checkargs(char *argv[]);
 
 Display *disp;	
 int scr;
@@ -68,7 +68,7 @@ int main(int argc, char *argv[]) {
 	if (init_x() != OK)
 		err(RET_ERR, "Could not open display server");
 	
-	int colorState = init_win(&win, argc, argv, checkargs(argc, argv));
+	int colorState = init_win(&win, argc, argv, checkargs(argv));
 	if (colorState == 0)
 		colorState = BLACK;
 
@@ -165,7 +165,7 @@ void redraw(Window *win) {
 	XClearWindow(disp, *win);
 }
 
-int checkargs(int argc, char *argv[]) {
+int checkargs(char *argv[]) {
 	int temp;
 	if (argv[1] != NULL) {
 		if ( (sscanf(argv[1], "%d", &temp)) == 0)	// check if the argument is an int
