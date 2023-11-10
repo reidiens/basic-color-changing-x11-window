@@ -6,10 +6,13 @@ This simple program just creates a 1270x720px window and lets you toggle the bac
 Passing the numbers 1 or 2 as arguments to the bianry will set the starting color to black or white, respectively (the default is black).
 
 # How to compile:
-Navigate to the folder you downloaded to, then type:
+## GCC:
+In the terminal, go to whatever directory you downloaded to and type:
+``` gcc basic-window.c -lX11 -o basic-window ```
 
-`gcc basic-window.c -lX11 -o basic-window`
+## Make:
+Navigate to whatever directory you downloaded to and simply type
+```make```
 
-then type `./basic-window` to run it.
-
-`./basic-window 2` will make the background color white on launch.
+To clean up the object files, type
+```make all clean```
